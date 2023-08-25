@@ -4,10 +4,10 @@ import fs from 'fs/promises';
 const start = async () => {
     const nango = new Nango({ secretKey: 'e8ee0b0d-47ed-4936-a33f-7d08579d6540' });
 
-    const result = {}
+    let result = {}
     try {
       result = await nango.getRecords({
-        providerConfigKey: 'github',
+        providerConfigKey: 'demo-github-integration',
         connectionId: 'test-connection-id',
         model: 'GithubIssue'
       });
